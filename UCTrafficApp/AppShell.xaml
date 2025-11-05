@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="UCTrafficApp.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:UCTrafficApp"
+    xmlns:pages="clr-namespace:UCTrafficApp.Pages"
+    Shell.FlyoutBehavior="Disabled"
+    Title="UCTrafficApp"
+
+    Shell.TabBarBackgroundColor="Black"
+    Shell.TabBarTitleColor="Red" 
+    Shell.TabBarUnselectedColor="#666666"  Shell.TabBarDisabledColor="#333333"    >
+
+    <TabBar>
+        <ShellContent
+            Title="Traffic"
+            ContentTemplate="{DataTemplate local:MainPage}"
+            Route="MainPage" />
+
+        <ShellContent
+            Title="Home"
+            ContentTemplate="{DataTemplate pages:HomePage}" 
+            Route="HomePage" />
+
+    </TabBar>
+
+
+
+</Shell>
