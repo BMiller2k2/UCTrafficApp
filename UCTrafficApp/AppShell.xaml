@@ -23,6 +23,10 @@
             ContentTemplate="{DataTemplate pages:HomePage}" 
             Route="HomePage" />
 
+        <ShellContent
+            Title="Sign in"
+            ContentTemplate="{DataTemplate pages:Sign_in}" 
+            Route="Sign in" />
     </TabBar>
 
 
