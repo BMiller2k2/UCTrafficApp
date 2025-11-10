@@ -58,15 +58,25 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<PackageReference Include="Community.Maui.Mapbox" Version="1.0.19" />
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.1" />
+		<PackageReference Include="Microsoft.Maui.Controls.Maps" Version="8.0.100" />
+		<PackageReference Include="Microsoft.Maui.Essentials" Version="8.0.100" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
 	</ItemGroup>
 
 	<ItemGroup>
 	  <MauiXaml Update="Pages\HomePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)' == 'net8.0-android'">
+	  <PackageReference Include="Mapbox.Maui">
+	    <Version>10.11.1.1</Version>
+	  </PackageReference>
 	</ItemGroup>
 
 </Project>
