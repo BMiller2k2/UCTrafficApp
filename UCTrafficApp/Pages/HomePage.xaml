@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
-
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-x:Class="UCTrafficApp.Pages.HomePage"
-Title="UC Traffic Map"
-BackgroundColor="White">
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UCTrafficApp.Pages.HomePage"
+             Title="UC Traffic Map"
+             BackgroundColor="White">
 
     <Grid RowDefinitions="Auto,*" ColumnDefinitions="*">
         <!-- From/To Inputs -->
@@ -17,14 +16,10 @@ BackgroundColor="White">
 
             <Entry x:Name="FromEntry" Placeholder="From (Cincinnati)" HeightRequest="50" FontSize="Medium" Grid.Column="0"/>
             <Entry x:Name="ToEntry" Placeholder="To (Cincinnati)" HeightRequest="50" FontSize="Medium" Grid.Column="1"/>
-            <Button Text="Go" Clicked="OnGoClicked" Grid.Column="2" BackgroundColor="#FF4500" TextColor="White" HeightRequest="50"/>
+            <Button Text="Go" Clicked="OnGoClicked" Grid.Column="2" BackgroundColor="Red" TextColor="White" HeightRequest="50"/>
         </Grid>
 
         <!-- Map WebView -->
-        <WebView x:Name="MapWebView" Grid.Row="1"
-             HorizontalOptions="FillAndExpand"
-             VerticalOptions="FillAndExpand"/>
+        <WebView x:Name="MapWebView" Grid.Row="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
     </Grid>
-
-
 </ContentPage>
