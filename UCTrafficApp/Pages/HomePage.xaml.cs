@@ -1,4 +1,4 @@
-﻿using Microsoft.Maui.Controls;
+using Microsoft.Maui.Controls;
 using Microsoft.Maui.Devices.Sensors;
 using Microsoft.Maui.ApplicationModel;
 using Microsoft.Maui.Dispatching;
@@ -208,7 +208,7 @@ public partial class HomePage : ContentPage
             FromEntry.Placeholder = "From (e.g., Cincinnati)";
         }
     }
-
+   
 
     private void LoadMap()
     {
