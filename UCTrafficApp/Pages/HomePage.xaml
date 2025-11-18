@@ -5,7 +5,7 @@
              x:Class="UCTrafficApp.Pages.HomePage"
              Title="UC Traffic Map"
              BackgroundColor="White">
-
+ 
     <!-- Main Grid now has 3 rows: (0) Inputs & Options, (1) Favorites List, (2) Map -->
     <Grid RowDefinitions="Auto, Auto, *" ColumnDefinitions="*">
 
