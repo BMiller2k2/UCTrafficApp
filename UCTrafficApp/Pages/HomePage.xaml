@@ -1,12 +1,80 @@
 <?xml version="1.0" encoding="utf-8" ?>
+
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="UCTrafficApp.Pages.HomePage"
-             Title="HomePage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             Title="UC Traffic Map"
+             BackgroundColor="White">
+ 
+    <!-- Main Grid now has 3 rows: (0) Inputs & Options, (1) Favorites List, (2) Map -->
+    <Grid RowDefinitions="Auto, Auto, *" ColumnDefinitions="*">
+
+        <!-- Row 0: Inputs, Controls, and Options -->
+        <StackLayout Grid.Row="0" Padding="10" Spacing="10">
+
+            <!-- From/To Inputs, Go, Save, and Toggle Buttons -->
+            <Grid ColumnSpacing="5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                    <!-- Go (50px) -->
+                    <ColumnDefinition Width="Auto" />
+                    <!-- Save (40px) -->
+                    <ColumnDefinition Width="Auto" />
+                    <!-- Toggle (40px) -->
+                </Grid.ColumnDefinitions>
+
+                <!-- Input fields now have a smaller HeightRequest (40) -->
+                <Entry x:Name="FromEntry" Placeholder="From (Cincinnati)" HeightRequest="40" FontSize="Small" Grid.Column="0"/>
+                <Entry x:Name="ToEntry" Placeholder="To (Cincinnati)" HeightRequest="40" FontSize="Small" Grid.Column="1"/>
+
+                <!-- Go Button: WidthRequest reduced from 60 to 50, HeightRequest reduced to 40 -->
+                <Button Text="Go" Clicked="OnGoClicked" Grid.Column="2" BackgroundColor="#FF4500" TextColor="White" HeightRequest="40" WidthRequest="50"/>
+
+                <!-- Save Button: WidthRequest reduced from 50 to 40, HeightRequest reduced to 40 -->
+                <Button Text="★" Clicked="OnAddFavoriteClicked" Grid.Column="3" 
+                        BackgroundColor="#FFA500" TextColor="White" HeightRequest="40" WidthRequest="40"/>
+
+                <!-- Toggle Button: WidthRequest reduced from 50 to 40, HeightRequest reduced to 40 -->
+                <Button x:Name="ToggleFavoritesButton" Text="☰" Clicked="OnToggleFavoritesClicked" Grid.Column="4" 
+                        BackgroundColor="#007ACC" TextColor="White" HeightRequest="40" WidthRequest="40"/>
+            </Grid>
+
+            <!-- Avoid Highways Checkbox Option -->
+            <StackLayout Orientation="Horizontal" Spacing="10" Margin="5,0,0,0">
+                <CheckBox x:Name="AvoidHighwaysCheckbox" IsChecked="False"/>
+                <Label Text="Avoid Highways" VerticalOptions="Center" FontSize="Small" TextColor="#333"/>
+            </StackLayout>
+        </StackLayout>
+
+        <!-- Row 1: Favorites List View -->
+        <CollectionView x:Name="FavoritesListView" Grid.Row="1" SelectionMode="Single" 
+                        SelectionChanged="OnFavoriteSelected" IsVisible="False" 
+                        HeightRequest="180" BackgroundColor="#f0f0f0" Margin="10,0,10,10">
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout Orientation="Vertical" ItemSpacing="1"/>
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <!-- Display the route and a delete button -->
+                    <Grid Padding="10" ColumnDefinitions="*, Auto" BackgroundColor="White">
+                        <!-- Display the route as "From A to B" -->
+                        <Label Grid.Column="0" Text="{Binding DisplayName}" FontSize="Small" LineBreakMode="TailTruncation" VerticalTextAlignment="Center"/>
+
+                        <!-- Delete Button: uses CommandParameter to pass the item to C# -->
+                        <Button Grid.Column="1" Text="X" CommandParameter="{Binding .}" 
+                                Clicked="OnDeleteFavoriteClicked" BackgroundColor="#D9534F" TextColor="White" 
+                                CornerRadius="5" HeightRequest="30" WidthRequest="30" Margin="0,0,5,0"/>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <!-- Row 2: Map WebView -->
+        <WebView x:Name="MapWebView" Grid.Row="2"
+                 HorizontalOptions="FillAndExpand"
+                 VerticalOptions="FillAndExpand"/>
+    </Grid>
+
 </ContentPage>
