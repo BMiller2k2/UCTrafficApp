@@ -2,6 +2,8 @@
 using UCTrafficApp.Services;
 using System.IO;
 using Microsoft.Maui.Storage;
+using Microsoft.Maui.Controls.Hosting;
+using Microsoft.Maui.Hosting;
 
 namespace UCTrafficApp
 {
@@ -11,7 +13,7 @@ namespace UCTrafficApp
         {
             var builder = MauiApp.CreateBuilder();
             builder
-                .UseMauiApp<App>()
+                .UseMauiApp<App>() // Removed .UseMauiMaps()
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
