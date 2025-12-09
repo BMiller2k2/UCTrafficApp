@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UCTrafficApp.Pages.Email_verified"
+             Title="Email verified"
+             BackgroundColor="White">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30" Spacing="20">
+
+            <!-- Header -->
+            <Label Text="UC Traffic"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   TextColor="Black"
+                   HorizontalOptions="Center"
+                   Margin="0,60,0,10"/>
+
+            <!-- Confirmation -->
+            <Label Text="Your email was verified!"
+                   FontSize="18"
+                   FontAttributes="Bold"
+                   TextColor="Black"
+                   HorizontalOptions="Center"
+                   Margin="0,0,0,20"/>
+
+            <!-- Continue Button -->
+            <Button Text="Continue to sign in"
+                    BackgroundColor="Black"
+                    TextColor="White"
+                    CornerRadius="8"
+                    HeightRequest="45"
+                    FontAttributes="Bold"
+                    HorizontalOptions="Center"
+                    Margin="0,10,0,0"
+                    Clicked="OnContinueClicked"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

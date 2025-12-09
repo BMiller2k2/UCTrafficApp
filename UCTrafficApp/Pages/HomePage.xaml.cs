@@ -1,3 +1,4 @@
+
 using Microsoft.Maui.Controls;
 using Microsoft.Maui.Devices.Sensors;
 using Microsoft.Maui.ApplicationModel;
@@ -7,7 +8,14 @@ using System.Collections.ObjectModel;
 using System.Text.Json;
 using System.Threading.Tasks;
 
-namespace UCTrafficApp.Pages;
+namespace UCTrafficApp.Pages
+{
+    public partial class HomePage : ContentPage
+    {
+        public HomePage()
+        {
+            InitializeComponent();
+        }
 
 // --- Favorites Data Model ---
 public class FavoriteRoute
