@@ -1,9 +1,10 @@
-namespace UCTrafficApp.Pages;
-
-public partial class HomePage : ContentPage
+namespace UCTrafficApp.Pages
 {
-	public HomePage()
-	{
-		InitializeComponent();
-	}
+    public partial class HomePage : ContentPage
+    {
+        public HomePage()
+        {
+            InitializeComponent();
+        }
+    }
 }

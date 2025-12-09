@@ -1,4 +1,7 @@
 ﻿using Microsoft.Extensions.Logging;
+using UCTrafficApp.Services;
+using System.IO;
+using Microsoft.Maui.Storage;
 
 namespace UCTrafficApp
 {
@@ -15,11 +18,24 @@ namespace UCTrafficApp
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
 
+            // ✅ SQLite database path (cross-platform safe)
+            var dbPath = Path.Combine(FileSystem.AppDataDirectory, "users.db3");
+
+            // ✅ Register services for dependency injection
+            builder.Services.AddSingleton(new DatabaseService(dbPath));   // Database
+            builder.Services.AddSingleton<EmailService>();                // Email sender
+            builder.Services.AddSingleton<IAuthService, RealAuthService>(); // Real authentication with DB + lockout
+
 #if DEBUG
-    		builder.Logging.AddDebug();
+            builder.Logging.AddDebug();
 #endif
 
-            return builder.Build();
+            var app = builder.Build();
+
+            // Make services globally accessible via App.Services
+            App.Services = app.Services;
+
+            return app;
         }
     }
 }
