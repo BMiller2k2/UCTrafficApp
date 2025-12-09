@@ -1,4 +1,3 @@
-
 using Microsoft.Maui.Controls;
 using Microsoft.Maui.Devices.Sensors;
 using Microsoft.Maui.ApplicationModel;
@@ -8,14 +7,7 @@ using System.Collections.ObjectModel;
 using System.Text.Json;
 using System.Threading.Tasks;
 
-namespace UCTrafficApp.Pages
-{
-    public partial class HomePage : ContentPage
-    {
-        public HomePage()
-        {
-            InitializeComponent();
-        }
+namespace UCTrafficApp.Pages;
 
 // --- Favorites Data Model ---
 public class FavoriteRoute
@@ -216,7 +208,7 @@ public partial class HomePage : ContentPage
             FromEntry.Placeholder = "From (e.g., Cincinnati)";
         }
     }
-   
+
 
     private void LoadMap()
     {
