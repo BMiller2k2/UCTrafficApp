@@ -1,0 +1,15 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UCTrafficApp.Pages.ReportIssueThanksPage"
+             Title="">
+
+    <VerticalStackLayout Padding="24" Spacing="22" VerticalOptions="Center">
+        <Label Text="THANK YOU FOR YOUR&#10;FEEDBACK. WE WILL REVIEW THE&#10;ISSUE&#10;AND PROPERLY FIND A&#10;RESOLUTION"
+               FontAttributes="Bold"
+               HorizontalTextAlignment="Center" />
+
+        <Button Text="Return to Navigation"
+                HorizontalOptions="Center"
+                Clicked="Return_Clicked"/>
+    </VerticalStackLayout>
+</ContentPage>
