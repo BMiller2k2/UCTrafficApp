@@ -40,7 +40,7 @@
                        Placeholder="Username"
                        Keyboard="Email"
                        BackgroundColor="Transparent"
-                       TextColor="Black"
+                       TextColor="black"
                        PlaceholderColor="Gray" />
             </Frame>
 

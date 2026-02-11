@@ -1,18 +1,33 @@
-﻿using Microsoft.Maui.Storage;
+﻿
+using UCTrafficApp.Models;
+using Microsoft.Maui.Storage;
+using SQLite;
 using System.IO;
+using UCTrafficApp.Data;
 
 namespace UCTrafficApp
 {
     public partial class App : Application
     {
+        private readonly sqliteConnection _sqliteConnection;
         public static IServiceProvider Services { get; set; }
 
-        public App(IServiceProvider provider)
+        public App(IServiceProvider provider, sqliteConnection sqliteConnection)
         {
             InitializeComponent();
             Services = provider;
 
             MainPage = new AppShell();
+            _sqliteConnection = sqliteConnection;
+        }
+
+        protected override async void OnStart()
+        {
+            ISQLiteAsyncConnection database = _sqliteConnection.CreateConnection();
+
+            await database.CreateTableAsync<UserDto>();
+
+            base.OnStart();
         }
 
         // 🔹 Add this reset helper method

@@ -4,6 +4,7 @@ using System.IO;
 using Microsoft.Maui.Storage;
 using Microsoft.Maui.Controls.Hosting;
 using Microsoft.Maui.Hosting;
+using UCTrafficApp.Data;
 
 namespace UCTrafficApp
 {
@@ -21,17 +22,18 @@ namespace UCTrafficApp
                 });
 
             // ✅ SQLite database path (cross-platform safe)
+
+#if DEBUG
+            builder.Logging.AddDebug();
+#endif
+
+            builder.Services.AddSingleton<sqliteConnection>();//database connection
             var dbPath = Path.Combine(FileSystem.AppDataDirectory, "users.db3");
 
             // ✅ Register services for dependency injection
             builder.Services.AddSingleton(new DatabaseService(dbPath));   // Database
             builder.Services.AddSingleton<EmailService>();                // Email sender
             builder.Services.AddSingleton<IAuthService, RealAuthService>(); // Real authentication with DB + lockout
-
-#if DEBUG
-            builder.Logging.AddDebug();
-#endif
-
             var app = builder.Build();
 
             // Make services globally accessible via App.Services

@@ -4,7 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="UCTrafficApp.Pages.HomePage"
     Title="UC Traffic Map"
-    BackgroundColor="White">
+    BackgroundColor="DarkRed">
 
     <!-- 4 rows:
          0 = Welcome header

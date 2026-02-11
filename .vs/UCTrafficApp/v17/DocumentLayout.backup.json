@@ -1,0 +1,121 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\AfterDjenabaChanges\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AEC7CD41-A9A2-4012-89B6-F87B26E8986F}|UCTrafficApp\\UCTrafficApp.csproj|e:\\afterdjenabachanges\\uctrafficapp\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{AEC7CD41-A9A2-4012-89B6-F87B26E8986F}|UCTrafficApp\\UCTrafficApp.csproj|solutionrelative:uctrafficapp\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEC7CD41-A9A2-4012-89B6-F87B26E8986F}|UCTrafficApp\\UCTrafficApp.csproj|e:\\afterdjenabachanges\\uctrafficapp\\pages\\sign in.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEC7CD41-A9A2-4012-89B6-F87B26E8986F}|UCTrafficApp\\UCTrafficApp.csproj|solutionrelative:uctrafficapp\\pages\\sign in.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEC7CD41-A9A2-4012-89B6-F87B26E8986F}|UCTrafficApp\\UCTrafficApp.csproj|e:\\afterdjenabachanges\\uctrafficapp\\pages\\homepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{AEC7CD41-A9A2-4012-89B6-F87B26E8986F}|UCTrafficApp\\UCTrafficApp.csproj|solutionrelative:uctrafficapp\\pages\\homepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEC7CD41-A9A2-4012-89B6-F87B26E8986F}|UCTrafficApp\\UCTrafficApp.csproj|e:\\afterdjenabachanges\\uctrafficapp\\pages\\sign in.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{AEC7CD41-A9A2-4012-89B6-F87B26E8986F}|UCTrafficApp\\UCTrafficApp.csproj|solutionrelative:uctrafficapp\\pages\\sign in.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEC7CD41-A9A2-4012-89B6-F87B26E8986F}|UCTrafficApp\\UCTrafficApp.csproj|e:\\afterdjenabachanges\\uctrafficapp\\data\\crud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEC7CD41-A9A2-4012-89B6-F87B26E8986F}|UCTrafficApp\\UCTrafficApp.csproj|solutionrelative:uctrafficapp\\data\\crud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEC7CD41-A9A2-4012-89B6-F87B26E8986F}|UCTrafficApp\\UCTrafficApp.csproj|e:\\afterdjenabachanges\\uctrafficapp\\data\\sqliteconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEC7CD41-A9A2-4012-89B6-F87B26E8986F}|UCTrafficApp\\UCTrafficApp.csproj|solutionrelative:uctrafficapp\\data\\sqliteconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HomePage.xaml",
+              "DocumentMoniker": "E:\\AfterDjenabaChanges\\UCTrafficApp\\Pages\\HomePage.xaml",
+              "RelativeDocumentMoniker": "UCTrafficApp\\Pages\\HomePage.xaml",
+              "ToolTip": "E:\\AfterDjenabaChanges\\UCTrafficApp\\Pages\\HomePage.xaml",
+              "RelativeToolTip": "UCTrafficApp\\Pages\\HomePage.xaml",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-02-11T19:12:02.43Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AppShell.xaml",
+              "DocumentMoniker": "E:\\AfterDjenabaChanges\\UCTrafficApp\\AppShell.xaml",
+              "RelativeDocumentMoniker": "UCTrafficApp\\AppShell.xaml",
+              "ToolTip": "E:\\AfterDjenabaChanges\\UCTrafficApp\\AppShell.xaml",
+              "RelativeToolTip": "UCTrafficApp\\AppShell.xaml",
+              "ViewState": "AgIAABAAAAAAAAAAAAAwwBwAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-02-11T19:02:40.403Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Sign in.xaml.cs",
+              "DocumentMoniker": "E:\\AfterDjenabaChanges\\UCTrafficApp\\Pages\\Sign in.xaml.cs",
+              "RelativeDocumentMoniker": "UCTrafficApp\\Pages\\Sign in.xaml.cs",
+              "ToolTip": "E:\\AfterDjenabaChanges\\UCTrafficApp\\Pages\\Sign in.xaml.cs",
+              "RelativeToolTip": "UCTrafficApp\\Pages\\Sign in.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFMAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-11T15:53:59.237Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Sign in.xaml",
+              "DocumentMoniker": "E:\\AfterDjenabaChanges\\UCTrafficApp\\Pages\\Sign in.xaml",
+              "RelativeDocumentMoniker": "UCTrafficApp\\Pages\\Sign in.xaml",
+              "ToolTip": "E:\\AfterDjenabaChanges\\UCTrafficApp\\Pages\\Sign in.xaml",
+              "RelativeToolTip": "UCTrafficApp\\Pages\\Sign in.xaml",
+              "ViewState": "AgIAACEAAAAAAAAAAAAuwEkAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-02-11T15:54:47.57Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CRUD.cs",
+              "DocumentMoniker": "E:\\AfterDjenabaChanges\\UCTrafficApp\\Data\\CRUD.cs",
+              "RelativeDocumentMoniker": "UCTrafficApp\\Data\\CRUD.cs",
+              "ToolTip": "E:\\AfterDjenabaChanges\\UCTrafficApp\\Data\\CRUD.cs",
+              "RelativeToolTip": "UCTrafficApp\\Data\\CRUD.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-11T18:10:56.648Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "sqliteConnection.cs",
+              "DocumentMoniker": "E:\\AfterDjenabaChanges\\UCTrafficApp\\Data\\sqliteConnection.cs",
+              "RelativeDocumentMoniker": "UCTrafficApp\\Data\\sqliteConnection.cs",
+              "ToolTip": "E:\\AfterDjenabaChanges\\UCTrafficApp\\Data\\sqliteConnection.cs",
+              "RelativeToolTip": "UCTrafficApp\\Data\\sqliteConnection.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-11T17:09:00.709Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
