@@ -81,7 +81,7 @@ namespace UCTrafficApp.Pages
         }
         private async void OnSignUpClicked(object sender, EventArgs e)
         {
-            await Shell.Current.GoToAsync("//SignUp/SignUpPage");
+            await Shell.Current.GoToAsync("//Account/SignUpPage");
             return;
         }
     }

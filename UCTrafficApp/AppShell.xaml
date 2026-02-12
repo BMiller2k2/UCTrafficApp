@@ -41,14 +41,11 @@
             <ShellContent
                 Route="AccountLockPage"
                 ContentTemplate="{DataTemplate pages:Account_lock}" />
-        </Tab>
 
-        <Tab Route="SignUp" Title="SignUp">
-            <!-- Hidden routes (not visible as tabs) -->
             <ShellContent
+                Title="Sign up"
                 Route="SignUpPage"
                 ContentTemplate="{DataTemplate pages:Sign_up}" />
         </Tab>
-
     </TabBar>
 </Shell>

@@ -40,7 +40,7 @@
                        Placeholder="Username"
                        Keyboard="Email"
                        BackgroundColor="Transparent"
-                       TextColor="black"
+                       TextColor="white"
                        PlaceholderColor="Gray" />
             </Frame>
 
@@ -54,7 +54,7 @@
                        Placeholder="Password"
                        IsPassword="True"
                        BackgroundColor="Transparent"
-                       TextColor="Black"
+                       TextColor="White"
                        PlaceholderColor="Gray" />
             </Frame>
 
