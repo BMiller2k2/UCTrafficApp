@@ -1,4 +1,5 @@
 ﻿using UCTrafficApp.Pages;
+using UCTrafficApp.Services;
 
 namespace UCTrafficApp
 {
@@ -12,6 +13,9 @@ namespace UCTrafficApp
 
             Routing.RegisterRoute(nameof(ReportIssuePage), typeof(ReportIssuePage));
 
+            Routing.RegisterRoute("Email_verification", typeof(Email_verification));
+
+            Routing.RegisterRoute("Email_verified", typeof(Email_verified));
         }
     }
 }

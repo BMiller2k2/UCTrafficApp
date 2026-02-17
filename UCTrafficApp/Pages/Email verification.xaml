@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="UCTrafficApp.Pages.Email_verification"
              Title="Email verification"
-             BackgroundColor="White">
+             BackgroundColor="DarkRed">
 
     <ScrollView>
         <VerticalStackLayout Padding="30" Spacing="20">

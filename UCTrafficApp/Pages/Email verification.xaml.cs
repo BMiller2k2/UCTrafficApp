@@ -1,4 +1,5 @@
 using Microsoft.Extensions.DependencyInjection;
+using UCTrafficApp.Pages;
 using UCTrafficApp.Services;
 
 namespace UCTrafficApp.Pages
@@ -43,7 +44,7 @@ namespace UCTrafficApp.Pages
                 return;
             }
 
-            await Shell.Current.GoToAsync("//Account/EmailVerifiedPage");
+            await Shell.Current.GoToAsync("/Email_verified");
         }
 
         private async void OnCancelClicked(object sender, EventArgs e)

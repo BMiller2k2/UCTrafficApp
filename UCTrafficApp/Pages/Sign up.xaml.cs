@@ -49,7 +49,8 @@ namespace UCTrafficApp.Pages
                 }
 
                 // Navigate to verification page and pass the email
-                await Shell.Current.GoToAsync($"//Account/EmailVerificationPage?email={Uri.EscapeDataString(email)}");
+                await Shell.Current.GoToAsync($"Email_verification?email={Uri.EscapeDataString(email)}");
+
             }
             catch (Exception ex)
             {
