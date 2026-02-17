@@ -36,6 +36,15 @@ namespace UCTrafficApp.Pages
                 // ? success ? go to your Home tab/page
                 if (result.Success)
                 {
+                    // 1. Update the local state (so it persists on restart)
+                    Preferences.Set("IsSignedIn", true);
+
+                    // 2. Cast Shell.Current to your specific AppShell type to access SettingsTab
+                    if (Shell.Current is AppShell mainShell)
+                    {
+                        mainShell.SettingsTab.IsVisible = true;
+                    }
+
                     await Shell.Current.GoToAsync("//Home/HomePage");
                     return;
                 }

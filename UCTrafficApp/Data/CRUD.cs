@@ -1,6 +1,6 @@
 namespace UCTrafficApp.Data;
 
-public class CRUD : ContentPage
+public partial class CRUD : ContentPage
 {
 	public CRUD()
 	{

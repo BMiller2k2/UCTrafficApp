@@ -1,6 +1,5 @@
 ﻿using Microsoft.Maui.Controls;
-
-namespace SettingsApp;
+namespace UCTrafficApp.Pages;
 
 public partial class SettingsPage : ContentPage
 {
@@ -18,8 +17,8 @@ public partial class SettingsPage : ContentPage
     private async void OnPreferencesClicked(object sender, EventArgs e)
         => await DisplayAlert("Preferences", "Preferences settings will be added soon.", "OK");
 
-    private async void OnAboutClicked(object sender, EventArgs e)
-        => await Shell.Current.GoToAsync(nameof(AboutPage));
+    //private async void OnAboutClicked(object sender, EventArgs e)
+    //    => await Shell.Current.GoToAsync(nameof(AboutPage));
 
     private async void OnReportIssueClicked(object sender, EventArgs e)
         => await Shell.Current.GoToAsync(nameof(ReportIssuePage));

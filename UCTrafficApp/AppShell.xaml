@@ -16,10 +16,10 @@
         <!-- Give the tab a route -->
         <Tab Route="Home" Title="Home" Icon="home.png">
             <ShellContent
-        Title="Home"
-        Route="HomePage"
-        ContentTemplate="{DataTemplate pages:HomePage}" />
-        </Tab>
+                Title="Home"
+                Route="HomePage"
+                ContentTemplate="{DataTemplate pages:HomePage}" />
+                </Tab>
 
         <!-- ACCOUNT TAB -->
         <Tab Route="Account" Title="Account" Icon="account.png">
@@ -31,21 +31,25 @@
                 ContentTemplate="{DataTemplate pages:Sign_in}" />
 
             <ShellContent
-                Route="EmailVerificationPage"
-                ContentTemplate="{DataTemplate pages:Email_verification}" />
-
-            <ShellContent
-                Route="EmailVerifiedPage"
-                ContentTemplate="{DataTemplate pages:Email_verified}" />
-
-            <ShellContent
-                Route="AccountLockPage"
-                ContentTemplate="{DataTemplate pages:Account_lock}" />
-
-            <ShellContent
                 Title="Sign up"
                 Route="SignUpPage"
                 ContentTemplate="{DataTemplate pages:Sign_up}" />
         </Tab>
+        
+        <Tab Route="About" Title="About" Icon="home.png">
+            <ShellContent
+                Title="About"
+                Route="AboutPage"
+                ContentTemplate="{DataTemplate pages:AboutPage}" />
+        </Tab>
+
+        <Tab x:Name="SettingsTab" Route="SettingsPage" x:FieldModifier="Public" Title="Settings" Icon="account.png" IsVisible="False">
+            <ShellContent
+            Title="Settings"
+            Route="SettingsPage"
+            ContentTemplate="{DataTemplate pages:SettingsPage}" />
+        </Tab>
+
+
     </TabBar>
 </Shell>

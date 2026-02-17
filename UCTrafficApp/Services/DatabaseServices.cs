@@ -13,6 +13,8 @@ namespace UCTrafficApp.Services
             SQLitePCL.Batteries_V2.Init();
             _db = new SQLiteAsyncConnection(dbPath);
             _db.CreateTableAsync<UserModel>().Wait();
+            _db.CreateTableAsync<UserDto>().Wait();
+
         }
 
         public Task<UserModel> GetUserByEmailAsync(string email) =>
@@ -23,5 +25,7 @@ namespace UCTrafficApp.Services
 
         public Task<int> UpdateUserAsync(UserModel user) =>
             _db.UpdateAsync(user);
+
+
     }
 }

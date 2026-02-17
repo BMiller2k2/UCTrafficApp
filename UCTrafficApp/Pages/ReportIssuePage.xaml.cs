@@ -1,7 +1,7 @@
 ﻿using System.Text.Json;
 using Microsoft.Maui.Controls;
 
-namespace SettingsApp;
+namespace UCTrafficApp.Pages;
 
 public partial class ReportIssuePage : ContentPage
 {

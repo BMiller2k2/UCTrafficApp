@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="UCTrafficApp.Pages.Sign_up"
              Title="Sign up"
-             BackgroundColor="White">
+             BackgroundColor="DarkRed">
 
     <ScrollView>
         <VerticalStackLayout Padding="30" Spacing="20">

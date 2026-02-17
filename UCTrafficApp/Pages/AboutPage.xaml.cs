@@ -1,4 +1,4 @@
-﻿namespace SettingsApp;
+﻿namespace UCTrafficApp.Pages;
 
 public partial class AboutPage : ContentPage
 {

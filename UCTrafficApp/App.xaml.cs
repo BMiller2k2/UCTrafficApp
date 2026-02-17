@@ -12,23 +12,23 @@ namespace UCTrafficApp
         private readonly sqliteConnection _sqliteConnection;
         public static IServiceProvider Services { get; set; }
 
-        public App(IServiceProvider provider, sqliteConnection sqliteConnection)
+        public App(IServiceProvider provider)
         {
             InitializeComponent();
             Services = provider;
 
             MainPage = new AppShell();
-            _sqliteConnection = sqliteConnection;
+
         }
 
-        protected override async void OnStart()
-        {
-            ISQLiteAsyncConnection database = _sqliteConnection.CreateConnection();
+        //protected override async void OnStart()
+        //{
+        //    ISQLiteAsyncConnection database = _sqliteConnection.CreateConnection();
 
-            await database.CreateTableAsync<UserDto>();
+        //    await database.CreateTableAsync<UserDto>();
 
-            base.OnStart();
-        }
+        //    base.OnStart();
+        //}
 
         // 🔹 Add this reset helper method
         public static void ResetDatabase()

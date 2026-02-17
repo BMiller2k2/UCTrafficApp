@@ -1,14 +1,15 @@
 ﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="SettingsApp.AboutPage"
-             Title="About">
+             x:Class="UCTrafficApp.Pages.AboutPage"
+             Title="About"
+             BackgroundColor="DarkRed">
 
     <ScrollView>
         <VerticalStackLayout Padding="20" Spacing="10">
             <Label Text="About UC Traffic"
                    FontAttributes="Bold"
                    FontSize="22"
-                   TextColor="#007ACC"/>
+                   TextColor="Black"/>
 
             <Label Text="This app is designed to help University of Cincinnati students, faculty, and staff navigate campus congestion. The app provides real-time traffic updates, accident reports, and parking availability using live data and user reports. Users can view live maps, receive notifications, report incidents, and save frequent locations. With built-in security features like two-factor authentication, UC Traffic ensures a safe and reliable experience. By combining real-time insights, convenience, and safety, the app helps reduce commute times, improve road safety, and create a more efficient and stress-free campus commute."
                    FontSize="16"
