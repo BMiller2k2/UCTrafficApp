@@ -65,14 +65,14 @@ namespace UCTrafficApp.Pages
                 {
                     var untilIso = Uri.EscapeDataString(until.UtcDateTime.ToString("o"));
                     await Shell.Current.GoToAsync(
-                        $"//Account/AccountLockPage?email={Uri.EscapeDataString(emailOrUser)}&until={untilIso}");
+                        $"//Account/Account_lock?email={Uri.EscapeDataString(emailOrUser)}&until={untilIso}");
                     return;
                 }
                 else if ((result.ErrorMessage ?? string.Empty)
                             .Contains("lock", StringComparison.OrdinalIgnoreCase))
                 {
                     // Fallback if you didn't add LockoutUntilUtc to AuthResult
-                    await Shell.Current.GoToAsync("//Account/AccountLockPage");
+                    await Shell.Current.GoToAsync("//Account/Account_lock");
                     return;
                 }
 

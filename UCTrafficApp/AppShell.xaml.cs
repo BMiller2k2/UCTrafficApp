@@ -16,6 +16,8 @@ namespace UCTrafficApp
             Routing.RegisterRoute("Email_verification", typeof(Email_verification));
 
             Routing.RegisterRoute("Email_verified", typeof(Email_verified));
+
+            Routing.RegisterRoute("Account_lock", typeof(Account_lock));
         }
     }
 }
