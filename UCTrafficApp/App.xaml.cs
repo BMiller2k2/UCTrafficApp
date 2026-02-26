@@ -20,7 +20,7 @@ namespace UCTrafficApp
             MainPage = new AppShell();
 
         }
-
+        // we dont use this anymore this is for xamarin forms, we use the MauiProgram.cs to create the database and tables
         //protected override async void OnStart()
         //{
         //    ISQLiteAsyncConnection database = _sqliteConnection.CreateConnection();

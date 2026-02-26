@@ -21,7 +21,7 @@ namespace UCTrafficApp
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
 
-            // ✅ SQLite database path (cross-platform safe)
+            // SQLite database path (cross-platform safe)
 
 #if DEBUG
             builder.Logging.AddDebug();
@@ -30,7 +30,7 @@ namespace UCTrafficApp
             builder.Services.AddSingleton<sqliteConnection>();//database connection
             var dbPath = Path.Combine(FileSystem.AppDataDirectory, "users.db3");
 
-            // ✅ Register services for dependency injection
+            // Register services for dependency injection
             builder.Services.AddSingleton(new DatabaseService(dbPath));   // Database
             builder.Services.AddSingleton<EmailService>();                // Email sender
             builder.Services.AddSingleton<IAuthService, RealAuthService>(); // Real authentication with DB + lockout
