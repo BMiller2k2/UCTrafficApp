@@ -35,7 +35,7 @@ namespace UCTrafficApp
         {
             try
             {
-                var dbPath = Path.Combine(FileSystem.AppDataDirectory, "users.db3");
+                var dbPath = Path.Combine(FileSystem.AppDataDirectory, "UCTrafficApp.db3");
 
                 if (File.Exists(dbPath))
                 {
