@@ -29,8 +29,6 @@ namespace UCTrafficApp
 
             builder.Services.AddSingleton<sqliteConnection>();//database connection
             var dbPath = Path.Combine(FileSystem.AppDataDirectory, "UCTrafficApp.db3");
-
-            // Register services for dependency injection
             builder.Services.AddSingleton(new DatabaseService(dbPath));   // Database
             builder.Services.AddSingleton<EmailService>();                // Email sender
             builder.Services.AddSingleton<IAuthService, RealAuthService>(); // Real authentication with DB + lockout

@@ -12,8 +12,8 @@ namespace UCTrafficApp.Services
             // Initialize SQLite
             SQLitePCL.Batteries_V2.Init();
             _db = new SQLiteAsyncConnection(dbPath);
-            _db.CreateTableAsync<UserModel>().Wait();
-            _db.CreateTableAsync<UserDto>().Wait();
+            _db.CreateTableAsync<UserModel>();
+            _db.CreateTableAsync<UserDto>();
 
         }
 
