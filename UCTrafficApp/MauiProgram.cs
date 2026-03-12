@@ -29,7 +29,7 @@ namespace UCTrafficApp
 
             builder.Services.AddSingleton<sqliteConnection>();//database connection
             var dbPath = Path.Combine(FileSystem.AppDataDirectory, "UCTrafficApp.db3");
-            builder.Services.AddSingleton(new DatabaseService(dbPath));   // Database
+            builder.Services.AddSingleton(new DatabaseCrudOperations(dbPath));   // Database
             builder.Services.AddSingleton<EmailService>();                // Email sender
             builder.Services.AddSingleton<IAuthService, RealAuthService>(); // Real authentication with DB + lockout
             var app = builder.Build();

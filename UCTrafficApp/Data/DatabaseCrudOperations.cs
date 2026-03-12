@@ -3,11 +3,11 @@ using UCTrafficApp.Models;
 
 namespace UCTrafficApp.Data
 {
-    public class DatabaseService
+    public class DatabaseCrudOperations
     {
         private readonly SQLiteAsyncConnection _db;
 
-        public DatabaseService(string dbPath)
+        public DatabaseCrudOperations(string dbPath)
         {
             // Initialize SQLite Tables and connection
             SQLitePCL.Batteries_V2.Init();

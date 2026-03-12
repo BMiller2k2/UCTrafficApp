@@ -9,13 +9,13 @@ namespace UCTrafficApp.Services
 {
     public class RealAuthService : IAuthService
     {
-        private readonly DatabaseService _db;
+        private readonly DatabaseCrudOperations _db;
         private readonly EmailService _email;
 
         private const int MaxFailedAttempts = 3;
         private const int LockMinutes = 15;
 
-        public RealAuthService(DatabaseService db, EmailService email)
+        public RealAuthService(DatabaseCrudOperations db, EmailService email)
         {
             _db = db;
             _email = email;
