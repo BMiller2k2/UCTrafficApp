@@ -21,7 +21,7 @@
 
             <Button Text="Submit Feedback"
                     Clicked="OnSubmitClicked"
-                    BackgroundColor="#007ACC"
+                    BackgroundColor="Black"
                     TextColor="White"
                     CornerRadius="8"/>
         </VerticalStackLayout>

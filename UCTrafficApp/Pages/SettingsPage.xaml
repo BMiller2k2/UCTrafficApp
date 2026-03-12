@@ -9,19 +9,19 @@
      <ScrollView>
         <VerticalStackLayout Padding="20" Spacing="15">
             <Button Text="Account"
-                    BackgroundColor="#007ACC"
+                    BackgroundColor="Black"
                     TextColor="White"
                     CornerRadius="8"
                     Clicked="OnAccountClicked"/>
 
             <Button Text="Privacy"
-                    BackgroundColor="#007ACC"
+                    BackgroundColor="Black"
                     TextColor="White"
                     CornerRadius="8"
                     Clicked="OnPrivacyClicked"/>
 
             <Button Text="Preferences"
-                    BackgroundColor="#007ACC"
+                    BackgroundColor="Black"
                     TextColor="White"
                     CornerRadius="8"
                     Clicked="OnPreferencesClicked"/>

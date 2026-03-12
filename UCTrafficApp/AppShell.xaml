@@ -6,6 +6,7 @@
     xmlns:pages="clr-namespace:UCTrafficApp.Pages"
     Shell.FlyoutBehavior="Disabled"
     Title="UCTrafficApp"
+    BackgroundColor="DarkRed"
     Shell.TabBarBackgroundColor="Black"
     Shell.TabBarTitleColor="Red" 
     Shell.TabBarUnselectedColor="#666666"
@@ -22,7 +23,7 @@
         </Tab>
 
         <!-- ACCOUNT TAB -->
-        <Tab Route="Account" Title="Account" Icon="account.png">
+        <Tab Route="Account" Title="Account" Icon="account.png" >
 
             <!-- Default visible page -->
             <ShellContent
