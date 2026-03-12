@@ -1,7 +1,8 @@
 ﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="UCTrafficApp.Pages.ReportIssuePage" 
-             Title="Report an Issue">
+             Title="Report an Issue"
+             BackgroundColor="DarkRed">
 
     <ScrollView>
         <VerticalStackLayout Padding="20" Spacing="15">
@@ -15,7 +16,7 @@
                     Placeholder="Describe your issue or feedback..."
                     AutoSize="TextChanges"
                     HeightRequest="150"
-                    BackgroundColor="#f2f2f2"
+                    BackgroundColor="DarkRed"
                     TextColor="Black"/>
 
             <Button Text="Submit Feedback"

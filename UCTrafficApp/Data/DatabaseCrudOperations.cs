@@ -14,6 +14,7 @@ namespace UCTrafficApp.Data
             _db = new SQLiteAsyncConnection(dbPath);
             _db.CreateTableAsync<UserModel>();
             _db.CreateTableAsync<UserDto>();
+            _db.CreateTableAsync<IssueDTO>();
 
         }
 
@@ -25,7 +26,15 @@ namespace UCTrafficApp.Data
 
         public Task<int> UpdateUserAsync(UserModel user) =>
             _db.UpdateAsync(user);
+        public async Task<int> SaveIssueAsync(string text)
+        {
+            var issue = new IssueDTO
+            {
+                IssueText = text
+            };
 
+            return await _db.InsertAsync(issue);
+        }
 
     }
 }

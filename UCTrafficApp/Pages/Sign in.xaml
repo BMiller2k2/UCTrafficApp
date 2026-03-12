@@ -39,7 +39,7 @@
                 <Entry x:Name="UsernameEntry"
                        Placeholder="Username"
                        BackgroundColor="Transparent"
-                       TextColor="White"
+                       TextColor="Black"
                        PlaceholderColor="Gray" />
             </Frame>
 
@@ -53,7 +53,7 @@
                        Placeholder="Password"
                        IsPassword="True"
                        BackgroundColor="Transparent"
-                       TextColor="white"
+                       TextColor="Black"
                        PlaceholderColor="Gray" />
             </Frame>
 
