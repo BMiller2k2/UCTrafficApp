@@ -2,8 +2,8 @@
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using UCTrafficApp.Data;
 using UCTrafficApp.Models;
-using UCTrafficApp.Services;
 
 namespace UCTrafficApp.Services
 {

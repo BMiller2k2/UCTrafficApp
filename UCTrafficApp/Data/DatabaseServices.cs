@@ -1,7 +1,7 @@
 ﻿using SQLite;
 using UCTrafficApp.Models;
 
-namespace UCTrafficApp.Services
+namespace UCTrafficApp.Data
 {
     public class DatabaseService
     {
@@ -9,7 +9,7 @@ namespace UCTrafficApp.Services
 
         public DatabaseService(string dbPath)
         {
-            // Initialize SQLite
+            // Initialize SQLite Tables and connection
             SQLitePCL.Batteries_V2.Init();
             _db = new SQLiteAsyncConnection(dbPath);
             _db.CreateTableAsync<UserModel>();
