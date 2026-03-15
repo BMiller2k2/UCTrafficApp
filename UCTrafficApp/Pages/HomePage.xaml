@@ -52,20 +52,20 @@
                 <Button Grid.Column="2"
                         Text="Go"
                         HeightRequest="40" WidthRequest="50"
-                        BackgroundColor="#FF4500" TextColor="White"
+                        BackgroundColor="Black" TextColor="White"
                         Clicked="OnGoClicked" />
 
                 <Button Grid.Column="3"
                         Text="★"
                         HeightRequest="40" WidthRequest="40"
-                        BackgroundColor="#FFA500" TextColor="White"
+                        BackgroundColor="Black" TextColor="White"
                         Clicked="OnAddFavoriteClicked" />
 
                 <Button x:Name="ToggleFavoritesButton"
                         Grid.Column="4"
                         Text="☰"
                         HeightRequest="40" WidthRequest="40"
-                        BackgroundColor="#007ACC" TextColor="White"
+                        BackgroundColor="Black" TextColor="White"
                         Clicked="OnToggleFavoritesClicked" />
             </Grid>
 

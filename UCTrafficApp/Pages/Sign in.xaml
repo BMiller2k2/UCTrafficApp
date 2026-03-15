@@ -59,6 +59,7 @@
 
             <!-- Continue Button -->
             <Button Text="Continue"
+                    Margin="10"
                     BackgroundColor="Black"
                     TextColor="White"
                     CornerRadius="8"
@@ -66,6 +67,7 @@
                     FontAttributes="Bold"
                     Clicked="OnContinueClicked"/>
             <Button Text="Sign UP"
+                    Margin="10"
                     BackgroundColor="Black"
                     TextColor="White"
                     CornerRadius="8"
