@@ -63,6 +63,9 @@
 	  <MauiXaml Update="Pages\Account lock.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Pages\AccountPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Pages\Email verification.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

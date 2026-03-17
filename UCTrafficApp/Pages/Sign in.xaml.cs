@@ -36,10 +36,13 @@ namespace UCTrafficApp.Pages
                 // ? success ? go to your Home tab/page
                 if (result.Success)
                 {
-                    // 1. Update the local state (so it persists on restart)
+                    // 1. Update the local state
                     Preferences.Set("IsSignedIn", true);
 
-                    // 2. Cast Shell.Current to your specific AppShell type to access SettingsTab
+                    // ADDED: Save the email so the AccountPage can display it
+                    Preferences.Set("UserEmail", emailOrUser);
+
+                    // 2. Cast Shell.Current to access SettingsTab visibility
                     if (Shell.Current is AppShell mainShell)
                     {
                         mainShell.SettingsTab.IsVisible = true;
@@ -49,30 +52,26 @@ namespace UCTrafficApp.Pages
                     return;
                 }
 
-                // ?? verification required ? go to email verification and pass the email
+                // ?? verification required ?
                 if (result.RequiresEmailVerification)
                 {
-                    await Shell.Current.GoToAsync(
-                        $"//Account/EmailVerificationPage?email={Uri.EscapeDataString(emailOrUser)}");
+                    await Shell.Current.GoToAsync($"EmailVerificationPage?email={Uri.EscapeDataString(emailOrUser)}");
                     return;
                 }
 
-                // ? lockout ? redirect to lock page with countdown if available
-                // Prefer a typed property (LockoutUntilUtc); if you haven't added it yet, we also check the message text.
+                // ? lockout ?
                 DateTimeOffset until;
                 if (result is { LockoutUntilUtc: not null } &&
                     DateTimeOffset.TryParse(result.LockoutUntilUtc!.Value.ToString("o"), out until))
                 {
                     var untilIso = Uri.EscapeDataString(until.UtcDateTime.ToString("o"));
                     await Shell.Current.GoToAsync(
-                        $"//Account/Account_lock?email={Uri.EscapeDataString(emailOrUser)}&until={untilIso}");
+                        $"//Account/AccountLockPage?email={Uri.EscapeDataString(emailOrUser)}&until={untilIso}");
                     return;
                 }
-                else if ((result.ErrorMessage ?? string.Empty)
-                            .Contains("lock", StringComparison.OrdinalIgnoreCase))
+                else if ((result.ErrorMessage ?? string.Empty).Contains("lock", StringComparison.OrdinalIgnoreCase))
                 {
-                    // Fallback if you didn't add LockoutUntilUtc to AuthResult
-                    await Shell.Current.GoToAsync("//Account/Account_lock");
+                    await Shell.Current.GoToAsync("//Account/AccountLockPage");
                     return;
                 }
 
@@ -88,6 +87,7 @@ namespace UCTrafficApp.Pages
                 btn.IsEnabled = true;
             }
         }
+
         private async void OnSignUpClicked(object sender, EventArgs e)
         {
             await Shell.Current.GoToAsync("//Account/SignUpPage");

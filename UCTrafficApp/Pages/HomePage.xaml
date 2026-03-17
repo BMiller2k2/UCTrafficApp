@@ -42,12 +42,12 @@
                 <Entry x:Name="FromEntry"
                        Grid.Column="0"
                        Placeholder="From (Cincinnati)"
-                       HeightRequest="40" FontSize="Small" />
+                       HeightRequest="40" FontSize="Small" TextColor="White" />
 
                 <Entry x:Name="ToEntry"
                        Grid.Column="1"
                        Placeholder="To (Cincinnati)"
-                       HeightRequest="40" FontSize="Small" />
+                       HeightRequest="40" FontSize="Small" TextColor="White" />
 
                 <Button Grid.Column="2"
                         Text="Go"
@@ -71,9 +71,9 @@
 
             <!-- Options -->
             <StackLayout Orientation="Horizontal" Spacing="10" Margin="5,0,0,0">
-                <CheckBox x:Name="AvoidHighwaysCheckbox" IsChecked="False" />
+                <CheckBox x:Name="AvoidHighwaysCheckbox" IsChecked="False" Background="Black" />
                 <Label Text="Avoid Highways" VerticalOptions="Center"
-                       FontSize="Small" TextColor="#333" />
+                       FontSize="Small" TextColor="White" />
             </StackLayout>
         </VerticalStackLayout>
 

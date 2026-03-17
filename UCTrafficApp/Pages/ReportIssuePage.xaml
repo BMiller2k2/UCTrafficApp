@@ -10,14 +10,14 @@
             <Label Text="We value your feedback!"
                    FontAttributes="Bold"
                    FontSize="22"
-                   TextColor="#D62C2C"/>
+                   TextColor="AliceBlue"/>
 
             <Editor x:Name="FeedbackEditor"
                     Placeholder="Describe your issue or feedback..."
                     AutoSize="TextChanges"
                     HeightRequest="150"
                     BackgroundColor="DarkRed"
-                    TextColor="Black"/>
+                    TextColor="White"/>
 
             <Button Text="Submit Feedback"
                     Clicked="OnSubmitClicked"

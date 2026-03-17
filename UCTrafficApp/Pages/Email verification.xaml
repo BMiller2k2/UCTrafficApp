@@ -26,7 +26,7 @@
             <!-- Subtitle -->
             <Label Text="Verify your email address via code"
                    FontSize="14"
-                   TextColor="Gray"
+                   TextColor="Black"
                    HorizontalOptions="Center"
                    Margin="0,0,0,20"/>
 
@@ -41,7 +41,7 @@
                        Keyboard="Numeric"
                        IsPassword="True"
                        BackgroundColor="Transparent"
-                       TextColor="White"
+                       TextColor="Black"
                        PlaceholderColor="Gray" />
             </Frame>
 

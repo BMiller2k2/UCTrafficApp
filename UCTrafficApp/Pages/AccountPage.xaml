@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UCTrafficApp.Pages.AccountPage"
+             Title="Account"
+             BackgroundColor="DarkRed">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30" Spacing="20">
+
+            <Frame BackgroundColor="White" 
+       CornerRadius="10" 
+       HasShadow="False" 
+       Padding="20"
+       Margin="0,10">
+                <VerticalStackLayout Spacing="10">
+                    <HorizontalStackLayout Spacing="10">
+                        <Label Text="Status:" FontAttributes="Bold" TextColor="Gray"/>
+                        <Label Text="Logged In" TextColor="Green" FontAttributes="Bold"/>
+                    </HorizontalStackLayout>
+
+                    <BoxView HeightRequest="1" Color="#E0E0E0"/>
+
+                    <HorizontalStackLayout Spacing="10">
+                        <Label Text="Email:" FontAttributes="Bold" TextColor="Gray"/>
+                        <Label x:Name="UserEmailLabel" Text="Not Available" TextColor="Black"/>
+                    </HorizontalStackLayout>
+
+                    <BoxView HeightRequest="1" Color="#E0E0E0"/>
+
+                    <Label Text="App: UC Traffic" 
+               TextColor="Black" 
+               FontSize="14"/>
+                </VerticalStackLayout>
+            </Frame>
+
+            <Button Text="Sign Out"
+                    BackgroundColor="Black"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    CornerRadius="8"
+                    HeightRequest="50"
+                    Margin="0,20,0,0"
+                    Clicked="OnSignOutClicked"/>
+
+            <Button Text="Back to Settings"
+                    BackgroundColor="Transparent"
+                    TextColor="White"
+                    BorderColor="White"
+                    BorderWidth="1"
+                    CornerRadius="8"
+                    HeightRequest="50"
+                    Clicked="OnBackClicked"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

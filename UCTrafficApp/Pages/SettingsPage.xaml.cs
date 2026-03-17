@@ -1,4 +1,5 @@
 ﻿using Microsoft.Maui.Controls;
+
 namespace UCTrafficApp.Pages;
 
 public partial class SettingsPage : ContentPage
@@ -9,7 +10,10 @@ public partial class SettingsPage : ContentPage
     }
 
     private async void OnAccountClicked(object sender, EventArgs e)
-        => await DisplayAlert("Account", "Account settings will be added soon.", "OK");
+    {
+        // This replaces the DisplayAlert with the actual navigation command
+        await Shell.Current.GoToAsync("AccountPage");
+    }
 
     private async void OnPrivacyClicked(object sender, EventArgs e)
         => await DisplayAlert("Privacy", "Privacy settings will be added soon.", "OK");
@@ -17,10 +21,6 @@ public partial class SettingsPage : ContentPage
     private async void OnPreferencesClicked(object sender, EventArgs e)
         => await DisplayAlert("Preferences", "Preferences settings will be added soon.", "OK");
 
-    //private async void OnAboutClicked(object sender, EventArgs e)
-    //    => await Shell.Current.GoToAsync(nameof(AboutPage));
-
     private async void OnReportIssueClicked(object sender, EventArgs e)
         => await Shell.Current.GoToAsync(nameof(ReportIssuePage));
-
 }

@@ -26,7 +26,7 @@
             <!-- Subtitle -->
             <Label Text="Enter your email to sign up for this app"
                    FontSize="14"
-                   TextColor="Gray"
+                   TextColor="Black"
                    HorizontalOptions="Center"
                    Margin="0,0,0,20"/>
 
@@ -40,7 +40,7 @@
                        Placeholder="Username"
                        Keyboard="Email"
                        BackgroundColor="Transparent"
-                       TextColor="white"
+                       TextColor="Black"
                        PlaceholderColor="Gray" />
             </Frame>
 
@@ -54,7 +54,7 @@
                        Placeholder="Password"
                        IsPassword="True"
                        BackgroundColor="Transparent"
-                       TextColor="White"
+                       TextColor="Black"
                        PlaceholderColor="Gray" />
             </Frame>
 
@@ -71,7 +71,7 @@
             <!-- Terms -->
             <Label Text="By clicking continue, you agree to our Terms of Service and Privacy Policy."
                    FontSize="12"
-                   TextColor="Gray"
+                   TextColor="Black"
                    HorizontalOptions="Center"
                    HorizontalTextAlignment="Center"
                    LineBreakMode="WordWrap"

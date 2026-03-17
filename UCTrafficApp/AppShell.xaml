@@ -47,14 +47,14 @@
 
         </Tab>
         
-        <Tab Route="About" Title="About" Icon="home.png">
+        <Tab Route="About" Title="About" Icon="about4.png">
             <ShellContent
                 Title="About"
                 Route="AboutPage"
                 ContentTemplate="{DataTemplate pages:AboutPage}" />
         </Tab>
 
-        <Tab x:Name="SettingsTab" Route="SettingsPage" x:FieldModifier="Public" Title="Settings" Icon="account.png" IsVisible="False">
+        <Tab x:Name="SettingsTab" Route="SettingsPage" x:FieldModifier="Public" Title="Settings" Icon="settings.png" IsVisible="False">
             <ShellContent
             Title="Settings"
             Route="SettingsPage"
