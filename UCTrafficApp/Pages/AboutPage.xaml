@@ -2,18 +2,163 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="UCTrafficApp.Pages.AboutPage"
              Title="About"
-             BackgroundColor="DarkRed">
+             BackgroundColor="#1E1E1E">
 
     <ScrollView>
-        <VerticalStackLayout Padding="20" Spacing="10">
-            <Label Text="About UC Traffic"
-                   FontAttributes="Bold"
-                   FontSize="22"
-                   TextColor="Black"/>
+        <VerticalStackLayout Spacing="20" Padding="0,0,0,20">
 
-            <Label Text="This app is designed to help University of Cincinnati students, faculty, and staff navigate campus congestion. The app provides real-time traffic updates, accident reports, and parking availability using live data and user reports. Users can view live maps, receive notifications, report incidents, and save frequent locations. With built-in security features like two-factor authentication, UC Traffic ensures a safe and reliable experience. By combining real-time insights, convenience, and safety, the app helps reduce commute times, improve road safety, and create a more efficient and stress-free campus commute."
-                   FontSize="16"
-                   TextColor="Black"/>
+            <!-- Top Banner -->
+            <Grid HeightRequest="180" BackgroundColor="#990000">
+                <VerticalStackLayout VerticalOptions="Center"
+                                     HorizontalOptions="Center"
+                                     Spacing="8">
+                    <Label Text="UC Traffic"
+                           FontSize="30"
+                           FontAttributes="Bold"
+                           TextColor="White"
+                           HorizontalOptions="Center" />
+
+                    <Label Text="Campus Navigation Made Smarter"
+                           FontSize="16"
+                           TextColor="#FFD6D6"
+                           HorizontalOptions="Center" />
+                </VerticalStackLayout>
+            </Grid>
+
+            <VerticalStackLayout Padding="20" Spacing="20">
+
+                <!-- Main About Card -->
+                <Frame BackgroundColor="#2A2A2A"
+                       CornerRadius="16"
+                       Padding="20"
+                       HasShadow="False">
+
+                    <VerticalStackLayout Spacing="12">
+                        <Label Text="About UC Traffic"
+                               FontSize="22"
+                               FontAttributes="Bold"
+                               TextColor="#FF4C4C" />
+
+                        <BoxView HeightRequest="3"
+                                 WidthRequest="60"
+                                 Color="#CC0000"
+                                 HorizontalOptions="Start" />
+
+                        <Label Text="UC Traffic is designed to help University of Cincinnati students, faculty, and staff navigate campus congestion more efficiently. The app provides real-time traffic updates, accident reports, parking availability, and live map support to improve the campus commuting experience. By combining convenience, safety, and real-time awareness, UC Traffic helps users save time, stay informed, and move around campus more effectively."
+                               FontSize="16"
+                               TextColor="#DDDDDD" />
+
+                    </VerticalStackLayout>
+                </Frame>
+
+                <!-- Mission Card -->
+                <Frame BackgroundColor="#2A2A2A"
+                       CornerRadius="16"
+                       Padding="20"
+                       HasShadow="False"
+                       BorderColor="#444444">
+
+                    <VerticalStackLayout Spacing="12">
+                        <Label Text="Our Mission"
+                               FontSize="22"
+                               FontAttributes="Bold"
+                               TextColor="#FF4C4C" />
+
+                        <BoxView HeightRequest="3"
+                                 WidthRequest="60"
+                                 Color="#CC0000"
+                                 HorizontalOptions="Start" />
+
+                        <Label Text="Our mission is to make campus travel safer, faster, and less stressful by giving users a centralized platform for traffic information, parking updates, and incident reporting."
+                               FontSize="16"
+                               TextColor="#DDDDDD" />
+                    </VerticalStackLayout>
+                </Frame>
+
+                <!-- Features Section -->
+                <Label Text="Key Features"
+                       FontSize="22"
+                       FontAttributes="Bold"
+                       TextColor="#FF4C4C" />
+
+                <Grid ColumnDefinitions="*,*"
+                      RowDefinitions="Auto,Auto"
+                      ColumnSpacing="15"
+                      RowSpacing="15">
+
+                    <Frame Grid.Row="0" Grid.Column="0"
+                           BackgroundColor="#3A1E1E"
+                           CornerRadius="14"
+                           Padding="15"
+                           HasShadow="False">
+                        <VerticalStackLayout Spacing="8">
+                            <Label Text="Live Traffic"
+                                   FontSize="18"
+                                   FontAttributes="Bold"
+                                   TextColor="#FF6B6B" />
+                            <Label Text="View current traffic conditions around campus in real time."
+                                   FontSize="14"
+                                   TextColor="#DDDDDD" />
+                        </VerticalStackLayout>
+                    </Frame>
+
+                    <Frame Grid.Row="0" Grid.Column="1"
+                           BackgroundColor="#3A3320"
+                           CornerRadius="14"
+                           Padding="15"
+                           HasShadow="False">
+                        <VerticalStackLayout Spacing="8">
+                            <Label Text="Parking Updates"
+                                   FontSize="18"
+                                   FontAttributes="Bold"
+                                   TextColor="#FFCC66" />
+                            <Label Text="Check parking availability and avoid crowded areas."
+                                   FontSize="14"
+                                   TextColor="#DDDDDD" />
+                        </VerticalStackLayout>
+                    </Frame>
+
+                    <Frame Grid.Row="1" Grid.Column="0"
+                           BackgroundColor="#1E2A3A"
+                           CornerRadius="14"
+                           Padding="15"
+                           HasShadow="False">
+                        <VerticalStackLayout Spacing="8">
+                            <Label Text="Incident Reports"
+                                   FontSize="18"
+                                   FontAttributes="Bold"
+                                   TextColor="#66B2FF" />
+                            <Label Text="Receive alerts and report accidents or road issues quickly."
+                                   FontSize="14"
+                                   TextColor="#DDDDDD" />
+                        </VerticalStackLayout>
+                    </Frame>
+
+                    <Frame Grid.Row="1" Grid.Column="1"
+                           BackgroundColor="#1E3A2A"
+                           CornerRadius="14"
+                           Padding="15"
+                           HasShadow="False">
+                        <VerticalStackLayout Spacing="8">
+                            <Label Text="Secure Access"
+                                   FontSize="18"
+                                   FontAttributes="Bold"
+                                   TextColor="#66FF99" />
+                            <Label Text="Built with secure login features for a safer user experience."
+                                   FontSize="14"
+                                   TextColor="#DDDDDD" />
+                        </VerticalStackLayout>
+                    </Frame>
+                </Grid>
+
+                <!-- Footer -->
+                <Label Text="© 2026 UC Traffic Senior Design Project"
+                       FontSize="12"
+                       TextColor="#888888"
+                       HorizontalOptions="Center"
+                       Margin="0,10,0,0" />
+
+            </VerticalStackLayout>
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
