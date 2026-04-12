@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SettingsApp.PrivacyPage"
+             Title="Privacy">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+
+            <Label Text="Privacy Settings"
+                   FontSize="22"
+                   FontAttributes="Bold" />
+
+            <HorizontalStackLayout>
+                <Label Text="Allow Location Access" VerticalOptions="Center"/>
+                <Switch x:Name="LocationSwitch" HorizontalOptions="EndAndExpand"/>
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout>
+                <Label Text="Share Analytics Data" VerticalOptions="Center"/>
+                <Switch x:Name="AnalyticsSwitch" HorizontalOptions="EndAndExpand"/>
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout>
+                <Label Text="Profile Visible" VerticalOptions="Center"/>
+                <Switch x:Name="ProfileVisibleSwitch" HorizontalOptions="EndAndExpand"/>
+            </HorizontalStackLayout>
+
+            <Button Text="Save Privacy Settings"
+                    BackgroundColor="#007ACC"
+                    TextColor="White"
+                    CornerRadius="8"
+                    Clicked="OnSaveClicked"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
