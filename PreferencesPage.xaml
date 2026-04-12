@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SettingsApp.PreferencesPage"
+             Title="Preferences">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+
+            <Label Text="Preferences"
+                   FontSize="22"
+                   FontAttributes="Bold" />
+
+            <HorizontalStackLayout>
+                <Label Text="Dark Mode" VerticalOptions="Center"/>
+                <Switch x:Name="DarkModeSwitch" HorizontalOptions="EndAndExpand"/>
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout>
+                <Label Text="Notifications" VerticalOptions="Center"/>
+                <Switch x:Name="NotificationSwitch" HorizontalOptions="EndAndExpand"/>
+            </HorizontalStackLayout>
+
+            <Button Text="Save Preferences"
+                    BackgroundColor="#007ACC"
+                    TextColor="White"
+                    CornerRadius="8"
+                    Clicked="OnSaveClicked"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
