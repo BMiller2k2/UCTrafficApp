@@ -32,6 +32,7 @@ namespace UCTrafficApp
             builder.Services.AddSingleton(new DatabaseCrudOperations(dbPath));   // Database
             builder.Services.AddSingleton<EmailService>();                // Email sender
             builder.Services.AddSingleton<IAuthService, RealAuthService>(); // Real authentication with DB + lockout
+            builder.Services.AddSingleton<ITrafficService, TrafficService>(); // Traffic data service
             var app = builder.Build();
 
             // Make services globally accessible via App.Services

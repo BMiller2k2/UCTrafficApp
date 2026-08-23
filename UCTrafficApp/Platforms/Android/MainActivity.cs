@@ -1,4 +1,5 @@
-﻿using Android.App;
+﻿#if __ANDROID__
+using Android.App;
 using Android.Content.PM;
 using Android.OS;
 
@@ -9,3 +10,4 @@ namespace UCTrafficApp
     {
     }
 }
+#endif

@@ -6,12 +6,13 @@
     Title="UC Traffic Map"
     BackgroundColor="DarkRed">
 
-    <!-- 4 rows:
+    <!-- 5 rows:
          0 = Welcome header
-         1 = Inputs / options
-         2 = Favorites list (collapsible)
-         3 = Map -->
-    <Grid RowDefinitions="Auto,Auto,Auto,*" ColumnDefinitions="*"
+         1 = Live traffic data
+         2 = Inputs / options
+         3 = Favorites list (collapsible)
+         4 = Map -->
+    <Grid RowDefinitions="Auto,Auto,Auto,Auto,*" ColumnDefinitions="*"
           Padding="12" RowSpacing="8">
 
         <!-- Row 0: Welcome header -->
@@ -23,8 +24,62 @@
                    HorizontalOptions="Center" />
         </VerticalStackLayout>
 
-        <!-- Row 1: Inputs, controls, options -->
-        <VerticalStackLayout Grid.Row="1" Spacing="8">
+        <!-- Row 1: Live Traffic Data -->
+        <Frame Grid.Row="1" BorderColor="Orange" CornerRadius="10" Padding="12" HasShadow="True">
+            <VerticalStackLayout Spacing="8">
+                <Label Text="Live Traffic Status" FontSize="18" FontAttributes="Bold" TextColor="White" />
+
+                <!-- Loading Indicator -->
+                <ActivityIndicator IsRunning="{Binding IsLoading}" IsVisible="{Binding IsLoading}" 
+                                 Color="Orange" Margin="0,10" />
+
+                <!-- Status Message -->
+                <Label Text="{Binding StatusMessage}" FontSize="12" TextColor="#FFD700" 
+                       HorizontalOptions="Center" />
+
+                <!-- Traffic Data List -->
+                <CollectionView ItemsSource="{Binding TrafficDataList}" HeightRequest="200">
+                    <CollectionView.ItemsLayout>
+                        <LinearItemsLayout Orientation="Vertical" ItemSpacing="8" />
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame BorderColor="White" CornerRadius="8" Padding="12" Margin="0,4" HasShadow="True">
+                                <VerticalStackLayout Spacing="4">
+                                    <Label Text="{Binding RouteName, StringFormat='Route: {0}'}" 
+                                           FontSize="14" FontAttributes="Bold" TextColor="White" />
+                                    <Label Text="{Binding FromLocation, StringFormat='From: {0}'}" 
+                                           FontSize="12" TextColor="#E0E0E0" />
+                                    <Label Text="{Binding ToLocation, StringFormat='To: {0}'}" 
+                                           FontSize="12" TextColor="#E0E0E0" />
+
+                                    <!-- Traffic Status with Color Coding -->
+                                    <Grid ColumnDefinitions="*,Auto" ColumnSpacing="8" Margin="0,4,0,0">
+                                        <Label Grid.Column="0" Text="{Binding TrafficStatus}" FontSize="12" FontAttributes="Bold" TextColor="White" />
+                                        <Label Grid.Column="1" Text="{Binding EstimatedTravelMinutes, StringFormat='{0} min'}" 
+                                               FontSize="12" FontAttributes="Bold" TextColor="#90EE90" />
+                                    </Grid>
+
+                                    <Label Text="{Binding TrafficDescription}" FontSize="11" TextColor="#B0B0B0" 
+                                           LineBreakMode="WordWrap" />
+                                    <Label Text="{Binding LastUpdated, StringFormat='Updated: {0:HH:mm:ss}'}" 
+                                           FontSize="10" TextColor="#808080" />
+                                </VerticalStackLayout>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+
+                <!-- Refresh Button -->
+                <Button Text="Refresh Traffic Data" 
+                        Command="{Binding RefreshCommand}"
+                        BackgroundColor="Orange" TextColor="White" 
+                        CornerRadius="8" Padding="10" FontAttributes="Bold" />
+            </VerticalStackLayout>
+        </Frame>
+
+        <!-- Row 2: Inputs, controls, options -->
+        <VerticalStackLayout Grid.Row="2" Spacing="8">
 
             <!-- From/To + Go/Save/Toggle -->
             <Grid ColumnSpacing="5">
@@ -77,9 +132,9 @@
             </StackLayout>
         </VerticalStackLayout>
 
-        <!-- Row 2: Favorites (collapsible) -->
+        <!-- Row 3: Favorites (collapsible) -->
         <CollectionView x:Name="FavoritesListView"
-                        Grid.Row="2"
+                        Grid.Row="3"
                         IsVisible="False"
                         SelectionMode="Single"
                         HeightRequest="180"
@@ -109,9 +164,9 @@
             </CollectionView.ItemTemplate>
         </CollectionView>
 
-        <!-- Row 3: Map -->
+        <!-- Row 4: Map -->
         <WebView x:Name="MapWebView"
-                 Grid.Row="3"
+                 Grid.Row="4"
                  HorizontalOptions="FillAndExpand"
                  VerticalOptions="FillAndExpand" />
     </Grid>

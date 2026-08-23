@@ -1,4 +1,5 @@
-﻿using ObjCRuntime;
+﻿#if __MACCATALYST__
+using ObjCRuntime;
 using UIKit;
 
 namespace UCTrafficApp
@@ -14,3 +15,4 @@ namespace UCTrafficApp
         }
     }
 }
+#endif

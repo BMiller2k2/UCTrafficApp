@@ -6,6 +6,7 @@ using System.Diagnostics;
 using System.Collections.ObjectModel;
 using System.Text.Json;
 using System.Threading.Tasks;
+using UCTrafficApp.Services;
 
 namespace UCTrafficApp.Pages;
 
@@ -40,6 +41,14 @@ public partial class HomePage : ContentPage
     {
         InitializeComponent();
 
+        // Get the TrafficService from dependency injection
+        var trafficService = App.Services?.GetService<ITrafficService>();
+        if (trafficService != null)
+        {
+            var viewModel = new HomePageViewModel(trafficService);
+            BindingContext = viewModel;
+        }
+
         // Load existing favorites and assign to the CollectionView's ItemsSource
         LoadFavorites();
 
@@ -48,6 +57,15 @@ public partial class HomePage : ContentPage
         FavoritesListView.ItemsSource = FavoritesList;
 
         RequestLocationAndInit();
+
+        // Load traffic data when page appears
+        Loaded += async (s, e) =>
+        {
+            if (BindingContext is HomePageViewModel vm)
+            {
+                await vm.LoadTrafficDataAsync();
+            }
+        };
     }
 
     // --- Persistence Logic (Using Preferences) ---

@@ -1,4 +1,5 @@
-﻿using Android.App;
+﻿#if __ANDROID__
+using Android.App;
 using Android.Runtime;
 
 namespace UCTrafficApp
@@ -14,3 +15,4 @@ namespace UCTrafficApp
         protected override MauiApp CreateMauiApp() => MauiProgram.CreateMauiApp();
     }
 }
+#endif
