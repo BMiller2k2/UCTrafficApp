@@ -1,6 +1,21 @@
-# Visual Studio / .NET build and IDE cache (repo root)
-.vs/
+# Build output
 [Bb]in/
 [Oo]bj/
+[Oo]ut/
+
+# Visual Studio / Rider IDE caches
+.vs/
+.idea/
 *.user
 *.suo
+*.userosscache
+*.sln.docstates
+*.iml
+
+# Local SQLite databases (created at runtime in the app data directory)
+*.db3
+*.db3-journal
+
+# OS cruft
+.DS_Store
+Thumbs.db
